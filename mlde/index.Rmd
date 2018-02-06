@@ -1,0 +1,42 @@
+--- 
+title: "Modelos Lineales y Diseño de Experimentos"
+author: "Carlos José Ruiz-Henestrosa Ruiz"
+date: "`r Sys.Date()`"
+lang: es
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: cruizh/mlde
+description: "Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018"
+---
+
+# Requisitos previos {-}
+
+Este libro está escrito en **Markdown**, concretamente el dialecto de [Pandoc](https://pandoc.org). Puedes consultar el código fuente que ha generado este sitio web en 
+[el repositorio de GitHub](https://github.com/cruizh/mlde). o pulsando el botón de edición de la barra superior.
+
+La compilación de este libro se ha realizado mediante **bookdown**. Se puede instalar desde CRAN o GitHub:
+
+```{r eval=FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+# Información de la asignatura {-}
+
+## Profesores
+
+## Bibliografía recomendada
+
+## Evaluación alternativa
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
