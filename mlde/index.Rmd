@@ -6,7 +6,7 @@ lang: es
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [../book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: cruizh/mlde
@@ -30,9 +30,22 @@ install.packages("bookdown")
 
 ## Profesores
 
+Las clases prácticas tendrán lugar los martes en el Laboratorio 1 (alumnos con DNI impar) o en el Laboratorio 2 (alumnos con DNI par) y serán impartidas por [Joaquín García de las Heras](mailto:heras@us.es).
+
+Las clases teóricas tendrán lugar los jueves en el aula H1.11 y serán impartidas por [Emilio Carrizosa](mailto:ecarrizosa@us.es).
+
 ## Bibliografía recomendada
 
+- [@harrell2001regression]
+- [@friedman2001elements]
+- [@montgomery1991diseno]
+- [@pena2002regresion]
+
 ## Evaluación alternativa
+
+La asignatura se divide en una parte de teoría y otra de problemas. La prueba alternativa de teoría tendrá lugar el último día de clase. Se realizarán al menos 2 pruebas de problemas en días asignados para prácticas.
+
+Los exámenes de problemas se realizarán en ordenador debido a la naturaleza de los cálculos necesarios.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

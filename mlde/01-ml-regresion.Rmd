@@ -1,0 +1,53 @@
+# Modelos lineales en regresión {#ml-regresion}
+
+## Regresión lineal (simple)
+
+La regresión lineal simple consiste en aproximar los valores que toman una sucesión \((X_1, Y_1) \dots, (X_n, Y_n)\) independientes pero tal que \(Y_i\) y \(X_i\) son dependientes mediante la siguiente expresión:
+
+\[
+ y = \beta_{0} + \beta_{1} x + \varepsilon
+\]
+
+Sea \(g(\beta_0, \beta_1) = \min \sum_{i=1}^{n} \left( y_i - \beta_0 - \beta_1 x_i\right)^{2}\). 
+
+La obtención de los \(\beta_i\) se realiza aprovechando la condición necesaria y suficiente de optimalidad:
+
+\[
+\frac{\partial}{\partial \beta_0} g(\beta) =
+\frac{\partial}{\partial \beta_1} g(\beta) = 0
+\]
+
+\begin{gather*}
+\left.
+\begin{aligned}
+\sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i) &= 0\\
+\sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)x_i &= 0
+\end{aligned}
+\right\}\\
+\left.
+\begin{aligned}
+n \overline{y} - n\beta_0 - n\beta_1 \overline{x} &= 0\\
+n \overline{yx} - n\beta_0 \overline{x} - n \beta_1 \overline{x^{2}} &= 0
+\end{aligned}
+\right\}\\
+\beta_0 = \overline{y} - \beta_1 \overline{x}
+\end{gather*}
+
+\[
+\left.
+\begin{aligned}
+\quad \overline{y} - \beta_0 - \beta_1 \overline{x} &= 0 \quad (1)\\
+\quad \overline{yx}- \beta_0 \overline{x} - \beta_1 \overline{x^{2}} &= 0 \quad (2)
+\end{aligned}
+\right\}
+\]
+
+Si hacemos \((2) - x(1)\), obtenemos
+\begin{gather*}
+\underbrace{\overline{yx} - \overline{y}\, \overline{x}}_{S_{X,Y}} -
+\beta_1
+\underbrace{\left( \overline{x^{2}} - \overline{x}^{2} \right)}_{S_{X}^{2}}
+= 0\\
+\implies \beta_1 = \frac{S_{X,Y}}{S_{X}^{2}}, \quad
+\beta_0 = \overline{y} - \frac{S_{X,Y}}{S_{X}^{2}} \overline{x}
+\end{gather*}
