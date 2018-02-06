@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html  lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Geometría y Topología de Superficies</title>
+  <meta name="description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018">
+  <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Geometría y Topología de Superficies" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018" />
+  <meta name="github-repo" content="cruizh/gts" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Geometría y Topología de Superficies" />
+  
+  <meta name="twitter:description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018" />
+  
+
+<meta name="author" content="Carlos José Ruiz-Henestrosa Ruiz">
+
+
+<meta name="date" content="2018-02-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="gauss-bonnet.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Geometría y Topología de Superficies</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Requisitos previos</a></li>
+<li class="chapter" data-level="" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html"><i class="fa fa-check"></i>Información de la asignatura</a><ul>
+<li class="chapter" data-level="0.1" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#profesores"><i class="fa fa-check"></i><b>0.1</b> Profesores</a></li>
+<li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
+<li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html"><i class="fa fa-check"></i><b>1</b> Teorema de Gauss-Bonnet</a></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Geometría y Topología de Superficies</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="informacion-de-la-asignatura" class="section level1 unnumbered">
+<h1>Información de la asignatura</h1>
+<div id="profesores" class="section level2">
+<h2><span class="header-section-number">0.1</span> Profesores</h2>
+<p>Se recomienda contactar con los profesores por correo electrónico.</p>
+<p>La profesora del bloque de Geometría es <a href="mailto:cmgarcia@us.es">Mª Carmen Márquez García</a>. El horario de tutorías es el siguiente:</p>
+<ul>
+<li>Martes de 9:30 a 12:30</li>
+<li>Miércoles de 9:30 a 11:30</li>
+<li>Miércoles de 12:30 a 13:30</li>
+</ul>
+</div>
+<div id="bibliografia-recomendada" class="section level2">
+<h2><span class="header-section-number">0.2</span> Bibliografía recomendada</h2>
+<p>La bibliografía recomendada para el bloque de Geometría es <span class="citation">(Do Carmo <a href="#ref-docarmo1990">1990</a>)</span> y <span class="citation">(Cifre y González <a href="#ref-cifre2010">2010</a>)</span>.</p>
+</div>
+<div id="evaluacion-alternativa" class="section level2">
+<h2><span class="header-section-number">0.3</span> Evaluación alternativa</h2>
+<p>La evaluación alternativa se realiza mediante 3 exámenes parciales, puntuados cada uno sobre 10. La nota de la asignatura es la media arimética de las puntuaciones de los exámenes, con la condición de que deben obtenerse 3 puntos en cada examen para que se considere la media.</p>
+
+</div>
+</div>
+<h3>Bibliografía</h3>
+<div id="refs" class="references">
+<div id="ref-docarmo1990">
+<p>Do Carmo, Manfredo Perdigão. 1990. <em>Geometría diferencial de curvas y superficies</em>. Alianza Editorial.</p>
+</div>
+<div id="ref-cifre2010">
+<p>Cifre, MA Hernández, y JA Pastor González. 2010. «Un curso de Geometría diferencial». Consejo Superior de Investigaciones Científicas, Madrid.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gauss-bonnet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cruizh/gts/edit/master/index.Rmd",
+"text": "Editar"
+},
+"download": ["gts.pdf", "gts.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

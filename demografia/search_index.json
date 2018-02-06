@@ -1,0 +1,16 @@
+[
+["index.html", "Demografía Requisitos previos", " Demografía Carlos José Ruiz-Henestrosa Ruiz 2018-02-06 Requisitos previos Este libro está escrito en Markdown, concretamente el dialecto de Pandoc. Puedes consultar el código fuente que ha generado este sitio web en el repositorio de GitHub. o pulsando el botón de edición de la barra superior. La compilación de este libro se ha realizado mediante bookdown. Se puede instalar desde CRAN o GitHub: install.packages(&quot;bookdown&quot;) # or the development version # devtools::install_github(&quot;rstudio/bookdown&quot;) "],
+["informacion-de-la-asignatura.html", "Información de la asignatura", " Información de la asignatura Se recomienda contactar con los profesores por correo electrónico. Pedro Luque: lunes de 10:30 a 12:30; martes y jueves de 11:00 a 13:00. Siempre con cita previa. Correo electrónico: calvo@us.es. Antonio Beato: lunes de 9:00 a 11:30, martes de 11:30 a 14:00 y jueves de 11:30 a 12:30. Siempre cita previa o después de la clase. Correo electrónico: beato@us.es. Se hace mucho hincapié en la utilidad de Rmarkdown para la elaboración de informes, incluso de un Trabajo de Fin de Grado (Luque-Calvo 2017). Bibliografía "],
+["intro.html", "Tema 1 Introducción a la demografía. Fuentes demográficas de datos.", " Tema 1 Introducción a la demografía. Fuentes demográficas de datos. "],
+["herramientas.html", "Tema 2 Herramientas básicas del análisis demográfico", " Tema 2 Herramientas básicas del análisis demográfico "],
+["mortalidad.html", "Tema 3 La mortalidad", " Tema 3 La mortalidad "],
+["natalidad.html", "Tema 4 Natalidad y fecundidad", " Tema 4 Natalidad y fecundidad "],
+["nupcialidad.html", "Tema 5 Nupcialidad y rupturas matrimoniales", " Tema 5 Nupcialidad y rupturas matrimoniales "],
+["migracion.html", "Tema 6 Movimientos migratorios", " Tema 6 Movimientos migratorios "],
+["pob-estructura.html", "Tema 7 Estructura de la población", " Tema 7 Estructura de la población "],
+["pob-crecimiento.html", "Tema 8 Crecimiento de la población", " Tema 8 Crecimiento de la población "],
+["hogares.html", "Tema 9 Hogares y formas de convivencia", " Tema 9 Hogares y formas de convivencia "],
+["pob-proyecciones.html", "Tema 10 Proyecciones de población", " Tema 10 Proyecciones de población "],
+["otros.html", "Tema 11 Otros fenómenos demográficos", " Tema 11 Otros fenómenos demográficos "],
+["bibliografia.html", "Bibliografía", " Bibliografía "]
+]

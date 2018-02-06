@@ -1,0 +1,6 @@
+[
+["index.html", "Modelos Lineales y Diseño de Experimentos Requisitos previos", " Modelos Lineales y Diseño de Experimentos Carlos José Ruiz-Henestrosa Ruiz 2018-02-06 Requisitos previos Este libro está escrito en Markdown, concretamente el dialecto de Pandoc. Puedes consultar el código fuente que ha generado este sitio web en el repositorio de GitHub. o pulsando el botón de edición de la barra superior. La compilación de este libro se ha realizado mediante bookdown. Se puede instalar desde CRAN o GitHub: install.packages(&quot;bookdown&quot;) # or the development version # devtools::install_github(&quot;rstudio/bookdown&quot;) "],
+["informacion-de-la-asignatura.html", "Información de la asignatura 0.1 Profesores 0.2 Bibliografía recomendada 0.3 Evaluación alternativa", " Información de la asignatura 0.1 Profesores 0.2 Bibliografía recomendada 0.3 Evaluación alternativa "],
+["intro.html", "Tema 1 Introducción", " Tema 1 Introducción "],
+["bibliografia.html", "Bibliografía", " Bibliografía "]
+]
