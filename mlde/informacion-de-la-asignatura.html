@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="index.html">
-<link rel="next" href="intro.html">
+<link rel="next" href="ml-regresion.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -109,7 +109,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
 <li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="1" data-path="ml-regresion.html"><a href="ml-regresion.html"><i class="fa fa-check"></i><b>1</b> Modelos lineales en regresión</a><ul>
+<li class="chapter" data-level="1.1" data-path="ml-regresion.html"><a href="ml-regresion.html#regresion-lineal-simple"><i class="fa fa-check"></i><b>1.1</b> Regresión lineal (simple)</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
@@ -135,12 +137,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1>Información de la asignatura</h1>
 <div id="profesores" class="section level2">
 <h2><span class="header-section-number">0.1</span> Profesores</h2>
+<p>Las clases prácticas tendrán lugar los martes en el Laboratorio 1 (alumnos con DNI impar) o en el Laboratorio 2 (alumnos con DNI par) y serán impartidas por <a href="mailto:heras@us.es">Joaquín García de las Heras</a>.</p>
+<p>Las clases teóricas tendrán lugar los jueves en el aula H1.11 y serán impartidas por <a href="mailto:ecarrizosa@us.es">Emilio Carrizosa</a>.</p>
 </div>
 <div id="bibliografia-recomendada" class="section level2">
 <h2><span class="header-section-number">0.2</span> Bibliografía recomendada</h2>
+<ul>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="harrell2001regression"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="friedman2001elements"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="montgomery1991diseno"><strong>???</strong></span>)</span></li>
+<li><span class="citation">(<span class="citeproc-not-found" data-reference-id="pena2002regresion"><strong>???</strong></span>)</span></li>
+</ul>
 </div>
 <div id="evaluacion-alternativa" class="section level2">
 <h2><span class="header-section-number">0.3</span> Evaluación alternativa</h2>
+<p>La asignatura se divide en una parte de teoría y otra de problemas. La prueba alternativa de teoría tendrá lugar el último día de clase. Se realizarán al menos 2 pruebas de problemas en días asignados para prácticas.</p>
+<p>Los exámenes de problemas se realizarán en ordenador debido a la naturaleza de los cálculos necesarios.</p>
 
 </div>
 </div>
@@ -150,7 +162,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ml-regresion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -191,6 +203,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

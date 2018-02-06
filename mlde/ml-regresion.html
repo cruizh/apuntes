@@ -109,7 +109,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
 <li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="1" data-path="ml-regresion.html"><a href="ml-regresion.html"><i class="fa fa-check"></i><b>1</b> Modelos lineales en regresión</a><ul>
+<li class="chapter" data-level="1.1" data-path="ml-regresion.html"><a href="ml-regresion.html#regresion-lineal-simple"><i class="fa fa-check"></i><b>1.1</b> Regresión lineal (simple)</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
@@ -131,9 +133,54 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Tema 1</span> Introducción</h1>
+<div id="ml-regresion" class="section level1">
+<h1><span class="header-section-number">Tema 1</span> Modelos lineales en regresión</h1>
+<div id="regresion-lineal-simple" class="section level2">
+<h2><span class="header-section-number">1.1</span> Regresión lineal (simple)</h2>
+<p>La regresión lineal simple consiste en aproximar los valores que toman una sucesión <span class="math inline">\((X_1, Y_1) \dots, (X_n, Y_n)\)</span> independientes pero tal que <span class="math inline">\(Y_i\)</span> y <span class="math inline">\(X_i\)</span> son dependientes mediante la siguiente expresión:</p>
+<p><span class="math display">\[
+ y = \beta_{0} + \beta_{1} x + \varepsilon
+\]</span></p>
+<p>Sea <span class="math inline">\(g(\beta_0, \beta_1) = \min \sum_{i=1}^{n} \left( y_i - \beta_0 - \beta_1 x_i\right)^{2}\)</span>.</p>
+<p>La obtención de los <span class="math inline">\(\beta_i\)</span> se realiza aprovechando la condición necesaria y suficiente de optimalidad:</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial \beta_0} g(\beta) =
+\frac{\partial}{\partial \beta_1} g(\beta) = 0
+\]</span></p>
+<span class="math display">\[\begin{gather*}
+\left.
+\begin{aligned}
+\sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i) &amp;= 0\\
+\sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)x_i &amp;= 0
+\end{aligned}
+\right\}\\
+\left.
+\begin{aligned}
+n \overline{y} - n\beta_0 - n\beta_1 \overline{x} &amp;= 0\\
+n \overline{yx} - n\beta_0 \overline{x} - n \beta_1 \overline{x^{2}} &amp;= 0
+\end{aligned}
+\right\}\\
+\beta_0 = \overline{y} - \beta_1 \overline{x}
+\end{gather*}\]</span>
+<p><span class="math display">\[
+\left.
+\begin{aligned}
+\quad \overline{y} - \beta_0 - \beta_1 \overline{x} &amp;= 0 \quad (1)\\
+\quad \overline{yx}- \beta_0 \overline{x} - \beta_1 \overline{x^{2}} &amp;= 0 \quad (2)
+\end{aligned}
+\right\}
+\]</span></p>
+Si hacemos <span class="math inline">\((2) - x(1)\)</span>, obtenemos
+<span class="math display">\[\begin{gather*}
+\underbrace{\overline{yx} - \overline{y}\, \overline{x}}_{S_{X,Y}} -
+\beta_1
+\underbrace{\left( \overline{x^{2}} - \overline{x}^{2} \right)}_{S_{X}^{2}}
+= 0\\
+\implies \beta_1 = \frac{S_{X,Y}}{S_{X}^{2}}, \quad
+\beta_0 = \overline{y} - \frac{S_{X,Y}}{S_{X}^{2}} \overline{x}
+\end{gather*}\]</span>
 
+</div>
 </div>
             </section>
 
@@ -171,7 +218,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cruizh/mlde/edit/master/01-intro.Rmd",
+"link": "https://github.com/cruizh/mlde/edit/master/01-ml-regresion.Rmd",
 "text": "Editar"
 },
 "download": ["mlde.pdf", "mlde.epub"],
@@ -182,6 +229,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
