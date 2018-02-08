@@ -1,0 +1,1 @@
+# Control óptimo de modelos basados en ecuaciones y sistemas diferenciales ordinarios {#control}

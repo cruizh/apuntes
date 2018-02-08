@@ -1,0 +1,1 @@
+# Modelos obtenidos a partir del cálculo de variaciones. Problemas de contorno para ecuaciones diferenciales ordinarias.

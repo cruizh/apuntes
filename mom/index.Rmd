@@ -1,0 +1,38 @@
+--- 
+title: "Teoría de la probabilidad"
+author: "Carlos José Ruiz-Henestrosa Ruiz"
+date: "`r Sys.Date()`"
+lang: es
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [../book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: cruizh/apuntes
+description: "Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018"
+---
+
+# Información de la asignatura {-}
+
+## Profesores
+
+- Las clases de teoría son impartidas por [Anna Doubova Krasotchenko](http://personal.us.es/doubova/) los miercoles y los jueves de 14:30 a 15:30.
+  Correo electrónico: <doubova@us.es>. Tutorías siempre con cita previa.
+- Las clases prácticas son impartidas los lunes de 15:30 a 17:30 por Mª Ángeles Rodríguez Bellido en el Laboratorio 2 y por Fco. Javier Suárez Grau en el Laboratorio 4.
+
+## Bibliografía recomendada
+
+## Evaluación alternativa
+
+La asignatura tendrá dos parciales: uno el 9 de abril y otro el 1 de junio, en el aula de informática.
+Los parciales están divididos en partes de teoría y problemas, puntuadas sobre 5.
+Se exige una calificación mínima de 1,5 puntos en cada parte para calcular la media.
+Además, se exige una puntuación mínima de 4 en cada parcial para calcular la media para la nota final.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
