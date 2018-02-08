@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="informacion-de-la-asignatura.html">
+<link rel="prev" href="index.html">
 <link rel="next" href="bibliografia.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,6 +47,24 @@
 
 
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      Abs: ["{\\lvert #1 \\rvert}",1],
+      EV: ["\\operatorname{\\mathbb{E}}\\left[#1\\right]",1],
+      P: ["\\operatorname{\\mathbb{P}}\\left[#1\\right]", 1],
+      Norm: ["\\operatorname{N}\\left(#1,#2\\right)", 2],
+      Chisq: ["\\operatorname{\\chi}_{#1}", 1],
+      Dt: ["\\operatorname{t}_{#1}", 1],
+      DF: ["\\operatorname{F}_{#1,#2}", 2],
+      DK: ["\\operatorname{K}"],
+      DExp: ["\\operatorname{Exp}\\left(#1\\right)", 1],
+      lto: ["\\overset{\\mathcal{L}}{\\to}"]
+    }
+  }
+});
+</script>
 
 
 <style type="text/css">
@@ -103,14 +121,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Modelos Lineales y Diseño de Experimentos</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Requisitos previos</a></li>
-<li class="chapter" data-level="" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html"><i class="fa fa-check"></i>Información de la asignatura</a><ul>
-<li class="chapter" data-level="0.1" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#profesores"><i class="fa fa-check"></i><b>0.1</b> Profesores</a></li>
-<li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
-<li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Información de la asignatura</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#profesores"><i class="fa fa-check"></i>Profesores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#bibliografia-recomendada"><i class="fa fa-check"></i>Bibliografía recomendada</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#evaluacion-alternativa"><i class="fa fa-check"></i>Evaluación alternativa</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="ml-regresion.html"><a href="ml-regresion.html"><i class="fa fa-check"></i><b>1</b> Modelos lineales en regresión</a><ul>
-<li class="chapter" data-level="1.1" data-path="ml-regresion.html"><a href="ml-regresion.html#regresion-lineal-simple"><i class="fa fa-check"></i><b>1.1</b> Regresión lineal (simple)</a></li>
+<li class="chapter" data-level="1.1" data-path="ml-regresion.html"><a href="ml-regresion.html#regresion-lineal"><i class="fa fa-check"></i><b>1.1</b> Regresión lineal</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="ml-regresion.html"><a href="ml-regresion.html#un-ejemplo-simple"><i class="fa fa-check"></i><b>1.1.1</b> Un ejemplo simple</a></li>
+<li class="chapter" data-level="1.1.2" data-path="ml-regresion.html"><a href="ml-regresion.html#modelo-lineal"><i class="fa fa-check"></i><b>1.1.2</b> Modelo lineal</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="ml-regresion.html"><a href="ml-regresion.html#intervalos-de-confianza-y-contrastes-de-hipotesis-en-poblaciones-normales"><i class="fa fa-check"></i><b>1.2</b> Intervalos de confianza y contrastes de hipótesis en poblaciones normales</a></li>
+<li class="chapter" data-level="1.3" data-path="ml-regresion.html"><a href="ml-regresion.html#tests-de-bondad-de-ajuste"><i class="fa fa-check"></i><b>1.3</b> Tests de bondad de ajuste</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="ml-regresion.html"><a href="ml-regresion.html#test-de-kolmogorov-smirnov"><i class="fa fa-check"></i><b>1.3.1</b> Test de Kolmogorov-Smirnov</a></li>
+<li class="chapter" data-level="1.3.2" data-path="ml-regresion.html"><a href="ml-regresion.html#test-de-normalidad-de-lilliefors"><i class="fa fa-check"></i><b>1.3.2</b> Test de normalidad de Lilliefors</a></li>
+<li class="chapter" data-level="1.3.3" data-path="ml-regresion.html"><a href="ml-regresion.html#test-de-shapiro-wilk"><i class="fa fa-check"></i><b>1.3.3</b> Test de Shapiro-Wilk</a></li>
+<li class="chapter" data-level="1.3.4" data-path="ml-regresion.html"><a href="ml-regresion.html#q-q-plots"><i class="fa fa-check"></i><b>1.3.4</b> Q-Q plots</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="ml-regresion.html"><a href="ml-regresion.html#ejercicios"><i class="fa fa-check"></i><b>1.4</b> Ejercicios</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="ml-regresion.html"><a href="ml-regresion.html#problema-3"><i class="fa fa-check"></i><b>1.4.1</b> Problema 3</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 <li class="divider"></li>
@@ -135,8 +165,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="ml-regresion" class="section level1">
 <h1><span class="header-section-number">Tema 1</span> Modelos lineales en regresión</h1>
-<div id="regresion-lineal-simple" class="section level2">
-<h2><span class="header-section-number">1.1</span> Regresión lineal (simple)</h2>
+<div id="regresion-lineal" class="section level2">
+<h2><span class="header-section-number">1.1</span> Regresión lineal</h2>
+<div id="un-ejemplo-simple" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Un ejemplo simple</h3>
 <p>La regresión lineal simple consiste en aproximar los valores que toman una sucesión <span class="math inline">\((X_1, Y_1) \dots, (X_n, Y_n)\)</span> independientes pero tal que <span class="math inline">\(Y_i\)</span> y <span class="math inline">\(X_i\)</span> son dependientes mediante la siguiente expresión:</p>
 <p><span class="math display">\[
  y = \beta_{0} + \beta_{1} x + \varepsilon
@@ -179,7 +211,150 @@ Si hacemos <span class="math inline">\((2) - x(1)\)</span>, obtenemos
 \implies \beta_1 = \frac{S_{X,Y}}{S_{X}^{2}}, \quad
 \beta_0 = \overline{y} - \frac{S_{X,Y}}{S_{X}^{2}} \overline{x}
 \end{gather*}\]</span>
+</div>
+<div id="modelo-lineal" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Modelo lineal</h3>
+<p>La primera tarea seria de la asignatura es generalizar la idea anterior a un modelo en el que en vez de una sola <span class="math inline">\(x\)</span> consideramos <span class="math inline">\(x_1, \dots, x_p\)</span> variables independientes.</p>
+<p><span class="math display">\[
+y = \beta_0 + \sum_{i=1}^{p} \beta_i x_i + \varepsilon
+\]</span></p>
+<p>Consideramos que <span class="math inline">\(\varepsilon_{1}, \dots, \varepsilon_{n}\)</span> son una muestra aleatoria y buscamos un estimador de los parámetros <span class="math inline">\(\beta_{i}\)</span>. Nos plantearemos contrastes de hipótesis para <span class="math inline">\(H_{0} \colon \beta_{i} = 0\)</span>.</p>
+</div>
+</div>
+<div id="intervalos-de-confianza-y-contrastes-de-hipotesis-en-poblaciones-normales" class="section level2">
+<h2><span class="header-section-number">1.2</span> Intervalos de confianza y contrastes de hipótesis en poblaciones normales</h2>
+<p>Hay que recordar los siguientes resultados:</p>
+<p>Si <span class="math inline">\(Z \sim \Norm{0}{1}\)</span> y <span class="math inline">\(U \sim \Chisq{n}\)</span>, entonces: <span class="math display">\[
+\frac{Z}{\sqrt{\frac{U}{n}}} \sim \Dt{n}
+\]</span></p>
+<p>Si <span class="math inline">\(U_1 \sim \Chisq{n_1}\)</span> y <span class="math inline">\(U_2 \sim \Chisq{n_2}\)</span>, entonces: <span class="math display">\[
+\frac{U_1/n_1}{U_2/n_2} \sim \DF{n_1}{n_2}
+\]</span></p>
+<p>Si <span class="math inline">\(X_1, \dots, X_n \sim \Norm{\mu}{\sigma^2}\)</span>, entonces:</p>
+<span class="math display">\[\begin{align}
+\overline{X} &amp;\sim \Norm{\mu}{\frac{\sigma^2}{n}}\\
+\frac{(n-1) S_C^2}{\sigma^2} &amp;\sim \Chisq{n-1}
+\end{align}\]</span>
+<p>Combinando estos resultados se obtienen las cantidades pivotales para calcular intervalos de confianza.</p>
+</div>
+<div id="tests-de-bondad-de-ajuste" class="section level2">
+<h2><span class="header-section-number">1.3</span> Tests de bondad de ajuste</h2>
+<div id="test-de-kolmogorov-smirnov" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Test de Kolmogorov-Smirnov</h3>
+<p>Sean una fdD <span class="math inline">\(F^{*}\)</span> conocida y una muestra aleatoria <span class="math inline">\(X_{1},\dots,X_{n}\)</span> con fdD <span class="math inline">\(F\)</span> desconocida. Nos planteamos el siguiente contraste de hipótesis:</p>
+<p><span class="math display">\[
+\begin{cases}
+H_0: &amp; F = F^{*}\\
+H_1: &amp; F \neq F^{*}
+\end{cases}
+\]</span></p>
+<p>Sea <span class="math inline">\(F_n\)</span> la fdD empírica, y <span class="math inline">\(D_n := \sup_{x} \Abs{F_{n}(x) - F^{*}(x)}\)</span>. Rechazaremos <span class="math inline">\(H_0\)</span> si <span class="math inline">\(D_n &gt; c\)</span>.</p>
+<p>Si <span class="math inline">\(F^{*}\)</span> es absolutamente continua, entonces <span class="math display">\[
+\sqrt{n} D_{n} \lto \DK
+\]</span></p>
+<p>donde <span class="math inline">\(K\)</span> es la <em>distribución de Kolmogorov</em>, con función de distribución <span class="math display">\[
+F_{K}(x) = 1 - 2 \sum_{k=1}^{\infty} {(-1)^{k-1} e^{-2 k^2 x^2}} I_{(0,+\infty)}(x)
+\]</span></p>
+<p>No es necesario conocer la función de distribución; solo la propiedad anterior.</p>
+<p>Buscamos <span class="math inline">\(c\)</span> tal que <span class="math inline">\(\P{D_n &gt; c} \leq \alpha\)</span>. <span class="math display">\[
+\P{D_n &gt; c} = \P{\sqrt{n} D_n &gt; c\sqrt{n}} \approx \P{K &gt; c \sqrt{n}}
+\]</span></p>
+<p>Por tanto, tenemos <span class="math display">\[
+c = \frac{1}{\sqrt{n}} F_{K}^{-1}(1-\alpha)
+\]</span></p>
+<p>R permite realizar tests de Kolmogorov-Smirnov mediante la función <code>ks.test</code>. Veamos un ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="kw">rexp</span>(<span class="dv">100</span>,<span class="dt">rate=</span><span class="dv">1</span>)
+<span class="kw">ks.test</span>(x,<span class="st">&quot;pexp&quot;</span>,<span class="dt">rate=</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>## 
+##  One-sample Kolmogorov-Smirnov test
+## 
+## data:  x
+## D = 0.059052, p-value = 0.8766
+## alternative hypothesis: two-sided</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ks.test</span>(x,<span class="st">&quot;pnorm&quot;</span>,<span class="dt">mean=</span><span class="dv">0</span>,<span class="dt">sd=</span><span class="dv">1</span>)</code></pre></div>
+<pre><code>## 
+##  One-sample Kolmogorov-Smirnov test
+## 
+## data:  x
+## D = 0.50556, p-value &lt; 2.2e-16
+## alternative hypothesis: two-sided</code></pre>
+<p><img src="mlde_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Como podemos observar, no podemos rechazar que <span class="math inline">\(X \sim \DExp{1}\)</span>, pero sí rechazamos que <span class="math inline">\(X \sim \Norm{0}{1}\)</span>.</p>
+<p>Podemos plantearnos evaluar el <span class="math inline">\(p\)</span>-valor dependiendo del valor que introduzcamos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m =<span class="st"> </span><span class="kw">rexp</span>(<span class="dv">50</span>,<span class="dv">1</span>)
+rates =<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.5</span>,<span class="fl">1.5</span>,<span class="fl">0.1</span>)
+p.val =<span class="st"> </span><span class="kw">sapply</span>(rates, <span class="cf">function</span>(i) <span class="kw">ks.test</span>(m, <span class="st">&quot;pexp&quot;</span>, <span class="dt">rate=</span>i)<span class="op">$</span>p.value)
+<span class="kw">plot</span>(rates,p.val,<span class="st">&quot;l&quot;</span>)</code></pre></div>
+<p><img src="mlde_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="test-de-normalidad-de-lilliefors" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Test de normalidad de Lilliefors</h3>
+<p>Sea <span class="math inline">\(X_1, \dots, X_n\)</span> una mas con fdD <span class="math inline">\(F\)</span>. Nos planteamos el siguiente contraste de hipótesis: <span class="math display">\[
+\begin{cases}
+H_0: &amp; F \sim \Norm{\cdot}{\cdot}\\
+H_1: &amp; F \nsim \Norm{\cdot}{\cdot}
+\end{cases}
+\]</span></p>
+<p>El test consiste en construir estimadores <span class="math inline">\(\widehat{\mu}, \widehat{\sigma^2}\)</span> y buscar un <span class="math inline">\(c\)</span> adaptado.</p>
+<p>La función en R es la siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(nortest)
+<span class="kw">lillie.test</span>(x)</code></pre></div>
+</div>
+<div id="test-de-shapiro-wilk" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Test de Shapiro-Wilk</h3>
+<p>Sea <span class="math inline">\(X_1, \dots, X_n\)</span> mas con fdD <span class="math inline">\(F\)</span> y nos planteamos el mismo contraste de hipótesis. Llamamos <span class="math display">\[
+W = \frac{
+\frac{1}{n-1} \sum_{n=1}^{n} {\left( a_{i}x_{(i)} \right)^{2}}
+}{S_C^2},
+\]</span> con <span class="math inline">\(a_1, \dots, a_n\)</span> tabulados. Rechazamos <span class="math inline">\(H_0\)</span> si <span class="math inline">\(W &lt; c\)</span>.</p>
+<p>La función en R es <code>shapiro.test()</code></p>
+</div>
+<div id="q-q-plots" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Q-Q plots</h3>
+<p>Una forma gráfica de determinar si una muestra es normal consiste en elaborar una gráfica con <span class="math inline">\(\{(F^{-1}(x_i),F_{n}^{-1}(x_i)) : i \in I\}\)</span> para unos puntos <span class="math inline">\(x_i\)</span> escogidos.</p>
+<p>Para el caso normal, la función en R es <code>qqnorm</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">rnorm</span>(<span class="dv">50</span>), <span class="dt">main=</span><span class="st">&quot;qqnorm para normal&quot;</span>)</code></pre></div>
+<p><img src="mlde_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Como la gráfica está próxima a la bisectriz, aceptamos que es normal.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">rexp</span>(<span class="dv">50</span>), <span class="dt">main=</span><span class="st">&quot;qqnorm para exponencial&quot;</span>)</code></pre></div>
+<p><img src="mlde_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Como la gráfica se desvía mucho de la bisectriz, rechazamos que es normal.</p>
+<p>Veamos la distribución t de Student.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">rt</span>(<span class="dv">50</span>, <span class="dt">df=</span><span class="dv">1</span>), <span class="dt">main=</span><span class="kw">expression</span>(<span class="kw">paste</span>(<span class="st">&quot;qqnorm para &quot;</span>, t[<span class="dv">1</span>])))</code></pre></div>
+<p><img src="mlde_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">rt</span>(<span class="dv">50</span>,<span class="dt">df=</span><span class="dv">10</span>), <span class="dt">main=</span><span class="kw">expression</span>(<span class="kw">paste</span>(<span class="st">&quot;qqnorm para &quot;</span>, t[<span class="dv">10</span>])))</code></pre></div>
+<p><img src="mlde_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+</div>
+</div>
+<div id="ejercicios" class="section level2">
+<h2><span class="header-section-number">1.4</span> Ejercicios</h2>
+<div id="problema-3" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Problema 3</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">prostate =<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;prostate.txt&quot;</span>, <span class="dt">sep=</span><span class="st">&quot; &quot;</span>)
+<span class="kw">summary</span>(prostate)</code></pre></div>
+<pre><code>##      lcavol           lweight           age             lbph        
+##  Min.   :-1.3471   Min.   :2.375   Min.   :41.00   Min.   :-1.3863  
+##  1st Qu.: 0.5128   1st Qu.:3.376   1st Qu.:60.00   1st Qu.:-1.3863  
+##  Median : 1.4469   Median :3.623   Median :65.00   Median : 0.3001  
+##  Mean   : 1.3500   Mean   :3.629   Mean   :63.87   Mean   : 0.1004  
+##  3rd Qu.: 2.1270   3rd Qu.:3.876   3rd Qu.:68.00   3rd Qu.: 1.5581  
+##  Max.   : 3.8210   Max.   :4.780   Max.   :79.00   Max.   : 2.3263  
+##       svi              lcp             gleason          pgg45       
+##  Min.   :0.0000   Min.   :-1.3863   Min.   :6.000   Min.   :  0.00  
+##  1st Qu.:0.0000   1st Qu.:-1.3863   1st Qu.:6.000   1st Qu.:  0.00  
+##  Median :0.0000   Median :-0.7985   Median :7.000   Median : 15.00  
+##  Mean   :0.2165   Mean   :-0.1794   Mean   :6.753   Mean   : 24.38  
+##  3rd Qu.:0.0000   3rd Qu.: 1.1787   3rd Qu.:7.000   3rd Qu.: 40.00  
+##  Max.   :1.0000   Max.   : 2.9042   Max.   :9.000   Max.   :100.00  
+##       lpsa        
+##  Min.   :-0.4308  
+##  1st Qu.: 1.7317  
+##  Median : 2.5915  
+##  Mean   : 2.4784  
+##  3rd Qu.: 3.0564  
+##  Max.   : 5.5829</code></pre>
 
+</div>
 </div>
 </div>
             </section>
@@ -187,7 +362,7 @@ Si hacemos <span class="math inline">\((2) - x(1)\)</span>, obtenemos
           </div>
         </div>
       </div>
-<a href="informacion-de-la-asignatura.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="bibliografia.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
