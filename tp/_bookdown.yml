@@ -1,0 +1,6 @@
+book_filename: "tp"
+language:
+  ui:
+    edit: 'Editar'
+    chapter_name: "Tema "
+delete_merged_file: true

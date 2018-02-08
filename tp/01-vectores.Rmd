@@ -1,0 +1,18 @@
+# Vectores aleatorios. Independencia.
+
+## Ejercicios
+
+### Ejercicio 1
+
+Sabemos que \(X \sim \Norm{\mu}{\sigma^{2}}\).
+Entonces su función de distribución es \(F_{X}(x) = \Phi \left(\frac{x-\mu}{\sigma}\right)\).
+Entonces \(\P{X > 7} = 0.5 \implies \P{X \leq 7} = \Phi \left(\frac{x-\mu}{\sigma}\right) = 1-0.5 = 0.5\).
+Como la distribución es simétrica respecto de \(\mu\), entonces \(\mu = 7\).
+
+Por otra parte, \(\P{X < 5.04} = \Phi \left(\frac{5.04-7}{\sigma} \right) = 0.025 \implies \frac{-1.96}{\sigma} = \operatorname{qnorm}(0.025) \approx -1.96\). Por tanto, \(\sigma = 1\).
+
+a. \[\P{X \leq 6} = \P{Z \leq \frac{6-7}{1}} = \Phi(-1) \approx 0.159\].
+b. Llamamos \(C\) al suceso "encontrar trabajo en 6 meses". Entonces
+\[\P{C} = \Pr{C|A}\P{A} + \P{C|B}\Pr{B} = 0.4 \cdot \Phi(-1) + 0.6 \cdot 0.2 \approx 0.183\].
+
+
