@@ -1,0 +1,43 @@
+--- 
+title: "Programación Matemática"
+author: "Carlos José Ruiz-Henestrosa Ruiz"
+date: "`r Sys.Date()`"
+lang: es
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [../book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: cruizh/apuntes
+description: "Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018"
+---
+
+# Introducción
+
+El objetivo de la *Programación Matemática* es el estudio teórico de los problemas de optimización,
+así como de la puesta en marcha de los algoritmos de resolución.
+
+La *Programación Matemática* estudia cómo describir y alcanzar lo que es mejor, lo que denominaremos **óptimo**.
+
+El término *programación* viene dado por los orígenes de esta metodología, inicialmente desarrollada en el contexto de la economía y la investigación operativa: *búsqueda de programas de actuación óptimos*.
+
+## Profesores
+
+La profesora de teoría es [Rafaela Osuna Gómez](rafaela@us.es), del despacho 8 del Departamento de Estadística e Investigación Operativa.
+Las clases de teoría se impartirán los lunes.
+Su horario de tutorías es:
+
+- Lunes de 12:30 a 14:30
+- Martes:
+  - de 10:30 a 12:30
+  - de 18:00 a 20:00
+
+El profesor de problemas es [Pedro Luque](http://destio.us.es/calvo/). Las clases de problemas se impartirán los miércoles.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

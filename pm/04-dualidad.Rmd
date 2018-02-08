@@ -1,0 +1,6 @@
+# Dualidad en programación lineal {#dualidad}
+## Introducción
+## El problema dual
+## Condiciones de optimalidad, teoremas de dualidad e interpretación económica del dual
+## Algoritmo del simplex dual
+## Análisis de sensibilidad y post-optimalidad

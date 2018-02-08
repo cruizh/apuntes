@@ -1,0 +1,8 @@
+# Programación lineal
+
+## Definiciones básicas. Planteamiento del problema
+## Teorema fundamental de la Programación lineal
+## El método del simplex
+### Mejora de una solución básica factible
+### Solución básica factible inicial
+### Convergencia

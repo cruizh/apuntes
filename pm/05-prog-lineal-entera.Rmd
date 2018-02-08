@@ -1,0 +1,7 @@
+# Programación lineal entera
+## Problemas con estructura especial
+### Transporte
+### Asignación
+### Flujo
+## Esquemas de ramificación y acotación
+## Introducción a los métodos de planos de corte

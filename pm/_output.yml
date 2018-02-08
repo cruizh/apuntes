@@ -1,0 +1,19 @@
+bookdown::gitbook:
+  css: style.css
+  includes:
+    in_header: mathjax.html
+  config:
+    toc:
+      before: |
+        <li><a href="./">Programación Matemática</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
+    edit: https://github.com/cruizh/apuntes/edit/master/pm/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

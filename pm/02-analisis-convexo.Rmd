@@ -1,0 +1,5 @@
+# Análisis convexo
+
+## Definiciones básicas. Teorema de Carathéodory.
+## Separación de conjuntos. Lema de Farkas.
+## Conjuntos poliédricos. Representación de conjuntos poliédricos.

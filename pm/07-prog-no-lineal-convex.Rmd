@@ -1,0 +1,4 @@
+# Programación no lineal sobre conjuntos convexos
+## Condiciones de optimalidad
+## Métodos de gradiente proyectado y reducido
+## Teoría Lagrangiana

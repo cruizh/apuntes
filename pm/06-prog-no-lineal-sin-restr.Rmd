@@ -1,0 +1,4 @@
+# Programación no lineal sin restricciones {#pnl}
+## Condiciones de optimalidad en problemas sin restricciones
+## Métodos iterados de tipo gradiente
+### Método de Newton
