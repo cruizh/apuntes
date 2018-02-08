@@ -13,35 +13,23 @@ github-repo: cruizh/mlde
 description: "Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018"
 ---
 
-# Requisitos previos {-}
-
-Este libro está escrito en **Markdown**, concretamente el dialecto de [Pandoc](https://pandoc.org). Puedes consultar el código fuente que ha generado este sitio web en 
-[el repositorio de GitHub](https://github.com/cruizh/mlde). o pulsando el botón de edición de la barra superior.
-
-La compilación de este libro se ha realizado mediante **bookdown**. Se puede instalar desde CRAN o GitHub:
-
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
-
 # Información de la asignatura {-}
 
-## Profesores
+## Profesores {-}
 
 Las clases prácticas tendrán lugar los martes en el Laboratorio 1 (alumnos con DNI impar) o en el Laboratorio 2 (alumnos con DNI par) y serán impartidas por [Joaquín García de las Heras](mailto:heras@us.es).
 
 Las clases teóricas tendrán lugar los jueves en el aula H1.11 y serán impartidas por [Emilio Carrizosa](mailto:ecarrizosa@us.es).
 
-## Bibliografía recomendada
+## Bibliografía recomendada {-}
 
 - [@harrell2001regression]
 - [@friedman2001elements]
 - [@montgomery1991diseno]
 - [@pena2002regresion]
+- [@pena1989estadistica]
 
-## Evaluación alternativa
+## Evaluación alternativa {-}
 
 La asignatura se divide en una parte de teoría y otra de problemas. La prueba alternativa de teoría tendrá lugar el último día de clase. Se realizarán al menos 2 pruebas de problemas en días asignados para prácticas.
 

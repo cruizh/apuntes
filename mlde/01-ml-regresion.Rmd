@@ -1,6 +1,8 @@
 # Modelos lineales en regresión {#ml-regresion}
 
-## Regresión lineal (simple)
+## Regresión lineal
+
+### Un ejemplo simple
 
 La regresión lineal simple consiste en aproximar los valores que toman una sucesión \((X_1, Y_1) \dots, (X_n, Y_n)\) independientes pero tal que \(Y_i\) y \(X_i\) son dependientes mediante la siguiente expresión:
 
@@ -51,3 +53,175 @@ Si hacemos \((2) - x(1)\), obtenemos
 \implies \beta_1 = \frac{S_{X,Y}}{S_{X}^{2}}, \quad
 \beta_0 = \overline{y} - \frac{S_{X,Y}}{S_{X}^{2}} \overline{x}
 \end{gather*}
+
+### Modelo lineal
+
+La primera tarea seria de la asignatura es generalizar la idea anterior a un modelo en el que en vez de una sola \(x\) consideramos \(x_1, \dots, x_p\) variables independientes.
+
+\[
+y = \beta_0 + \sum_{i=1}^{p} \beta_i x_i + \varepsilon
+\]
+
+Consideramos que \(\varepsilon_{1}, \dots, \varepsilon_{n}\) son una muestra aleatoria y buscamos un estimador de los parámetros \(\beta_{i}\). Nos plantearemos contrastes de hipótesis para \(H_{0} \colon \beta_{i} = 0\).
+
+## Intervalos de confianza y contrastes de hipótesis en poblaciones normales
+
+Hay que recordar los siguientes resultados:
+
+Si \(Z \sim \Norm{0}{1}\) y \(U \sim \Chisq{n}\), entonces:
+\[
+\frac{Z}{\sqrt{\frac{U}{n}}} \sim \Dt{n}
+\]
+
+Si \(U_1 \sim \Chisq{n_1}\) y \(U_2 \sim \Chisq{n_2}\), entonces:
+\[
+\frac{U_1/n_1}{U_2/n_2} \sim \DF{n_1}{n_2}
+\]
+
+Si \(X_1, \dots, X_n \sim \Norm{\mu}{\sigma^2}\), entonces:
+
+\begin{align}
+\overline{X} &\sim \Norm{\mu}{\frac{\sigma^2}{n}}\\
+\frac{(n-1) S_C^2}{\sigma^2} &\sim \Chisq{n-1}
+\end{align}
+
+Combinando estos resultados se obtienen las cantidades pivotales para calcular intervalos de confianza.
+
+## Tests de bondad de ajuste
+
+### Test de Kolmogorov-Smirnov
+
+Sean una fdD \(F^{*}\) conocida y una muestra aleatoria
+\(X_{1},\dots,X_{n}\) con fdD \(F\) desconocida.
+Nos planteamos el siguiente contraste de hipótesis:
+
+\[
+\begin{cases}
+H_0: & F = F^{*}\\
+H_1: & F \neq F^{*}
+\end{cases}
+\]
+
+Sea \(F_n\) la fdD empírica, y \(D_n := \sup_{x} \Abs{F_{n}(x) - F^{*}(x)}\).
+Rechazaremos \(H_0\) si \(D_n > c\).
+
+Si \(F^{*}\) es absolutamente continua, entonces
+\[
+\sqrt{n} D_{n} \lto \DK
+\]
+
+donde \(K\) es la _distribución de Kolmogorov_, con función de distribución
+\[
+F_{K}(x) = 1 - 2 \sum_{k=1}^{\infty} {(-1)^{k-1} e^{-2 k^2 x^2}} I_{(0,+\infty)}(x)
+\]
+
+No es necesario conocer la función de distribución; solo la propiedad anterior.
+
+Buscamos \(c\) tal que \(\P{D_n > c} \leq \alpha\).
+\[
+\P{D_n > c} = \P{\sqrt{n} D_n > c\sqrt{n}} \approx \P{K > c \sqrt{n}}
+\]
+
+Por tanto, tenemos
+\[
+c = \frac{1}{\sqrt{n}} F_{K}^{-1}(1-\alpha)
+\]
+
+R permite realizar tests de Kolmogorov-Smirnov
+mediante la función `ks.test`. Veamos un ejemplo:
+
+```{r ks.test}
+x = rexp(100,rate=1)
+ks.test(x,"pexp",rate=1)
+ks.test(x,"pnorm",mean=0,sd=1)
+```
+
+```{r, echo=FALSE}
+hist(x)
+```
+
+Como podemos observar, no podemos rechazar que \(X \sim \DExp{1}\),
+pero sí rechazamos que \(X \sim \Norm{0}{1}\).
+
+Podemos plantearnos evaluar el \(p\)-valor dependiendo del valor que introduzcamos.
+
+```{r}
+m = rexp(50,1)
+rates = seq(0.5,1.5,0.1)
+p.val = sapply(rates, function(i) ks.test(m, "pexp", rate=i)$p.value)
+plot(rates,p.val,"l")
+```
+
+### Test de normalidad de Lilliefors
+
+Sea \(X_1, \dots, X_n\) una mas con fdD \(F\).
+Nos planteamos el siguiente contraste de hipótesis:
+\[
+\begin{cases}
+H_0: & F \sim \Norm{\cdot}{\cdot}\\
+H_1: & F \nsim \Norm{\cdot}{\cdot}
+\end{cases}
+\]
+
+El test consiste en construir estimadores \(\widehat{\mu}, \widehat{\sigma^2}\)
+y buscar un \(c\) adaptado.
+
+La función en R es la siguiente:
+
+```{r, eval=FALSE}
+library(nortest)
+lillie.test(x)
+```
+
+### Test de Shapiro-Wilk
+
+Sea \(X_1, \dots, X_n\) mas con fdD \(F\) y
+nos planteamos el mismo contraste de hipótesis.
+Llamamos
+\[
+W = \frac{
+\frac{1}{n-1} \sum_{n=1}^{n} {\left( a_{i}x_{(i)} \right)^{2}}
+}{S_C^2},
+\]
+con \(a_1, \dots, a_n\) tabulados.
+Rechazamos \(H_0\) si \(W < c\).
+
+La función en R es `shapiro.test()`
+
+### Q-Q plots
+Una forma gráfica de determinar si una muestra es normal consiste en
+elaborar una gráfica con \(\{(F^{-1}(x_i),F_{n}^{-1}(x_i)) : i \in I\}\)
+para unos puntos \(x_i\) escogidos.
+
+Para el caso normal, la función en R es `qqnorm`.
+
+```{r}
+qqnorm(rnorm(50), main="qqnorm para normal")
+```
+
+Como la gráfica está próxima a la bisectriz, aceptamos que es normal.
+
+```{r}
+qqnorm(rexp(50), main="qqnorm para exponencial")
+```
+
+Como la gráfica se desvía mucho de la bisectriz, rechazamos que es normal.
+
+
+Veamos la distribución t de Student.
+
+```{r}
+qqnorm(rt(50, df=1), main=expression(paste("qqnorm para ", t[1])))
+qqnorm(rt(50,df=10), main=expression(paste("qqnorm para ", t[10])))
+```
+
+
+## Ejercicios
+
+### Problema 3
+
+```{r}
+prostate = read.table("prostate.txt", sep=" ")
+summary(prostate)
+```
+
