@@ -1,1 +1,67 @@
 # Introducción a la demografía. Fuentes demográficas de datos. {#intro}
+
+```{definition}
+Según el diccionario demográfico multilingüe de Naciones Unidas,
+la **demografía** es “una ciencia que tiene como finalidad el estudio de la población humana y que se ocupa de su dimensión, estructura, evolución y
+características generales consideradas fundamentalmente desde un punto
+de vista cuantitativo”.
+```
+
+Algunas características que recogeremos serán:
+
+Dimensión
+  ~ tamaño de la población
+
+Estructura
+  ~ estudiamos caracteres que dividen la población en subpoblaciones de interés:
+  sexo, edad, lugar de residencia, estado civil, etc.
+
+Evolución
+  ~ variación de las características en el tiempo
+
+Características genereales
+  ~ características propias de otras ciencias, e.g. estado de salud, cociente intelectual, etc.
+
+La **finalidad** de la demografía es el estudio de la población
+y su movimiento en el seno de un conjunto humano,
+delimitado especialmente y revestido de cierto significado social.
+
+Existen varios tipos de demografía:
+
+- Cualitativa
+- Cuantitativa
+- Económica
+- Histórica
+- Matemática
+- Médica
+- Potencial
+- Pura (estudia las relaciones formales entre fenómenos demográficos, e.g. mortalidad-defunción y fecundidad-nacimiento)
+- Social (políticas demográficas)
+
+La interpretación de los datos demográficos no siempre es fácil;
+los datos no siempre tienen un valor único e indiscutible.
+El análisis demográfico debe considerar los diversos significados
+de una misma cifra.
+
+```{example}
+El porcentaje de personas mayores de 65 años es un indicador aparentemente sencillo.
+La comparación entre los valores de este indicador en cualquier población
+ilustra rápidamente sobre el proceso de envejecimiento demográfico.
+Sin emargo, si quisiéramos analizar las implicaciones socioeconómicas de su evolución,
+habrá que preguntarse si son equiparables en sus dimensiones biológicas,
+psíquicas, sociales o económicas las personas mayores de 65 años
+en 1950, 2001 y 2050.
+Por tanto, habrá que tomar precauciones al comparar datos en el tiempo.
+```
+
+```{definition}
+Una **población** es el conjunto de individuos que habitan
+un _territorio_ en un _momento_ dado.
+```
+
+Al considerar cualquier población es necesario tener en cuenta sus referencias temporal y territorial.
+Así, la práctica del análisis demográfico quedará limitada a
+los _momentos_ o _periodos_ y a las _unidades espaciales_.
+
+Las características demográficas pueden ser utilizadas como **criterios de agregación**
+y permiten estudiar la **estructura** o **composición** de las poblaciones.
