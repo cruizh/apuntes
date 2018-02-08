@@ -1,1 +1,232 @@
 # Teorema de Gauss-Bonnet {#gauss-bonnet}
+## Derivada covariante. Transporte paralelo.
+Sea \(M\) una superficie regular y \(U \subset M\) abierto.
+
+```{definition}
+Un *campo vectorial tangente* es una correspondencia \(V\) que a cada punto \(p \in U\) le hace corresponder un vector \(V(p) \in T_{p}(M)\),
+donde \(T_{p}(M)\) es el plano tangente a \(M\) en \(p\).
+
+El campo \(V\) se dice *diferenciable* en \(p\) si
+para cualquier parametrización local \(\mathbf{x}(u_1, u_2)\) de \(M\) entorno a \(p\) contenida en \(U\),
+las funciones \(f_{1}(u_1,u_2),\ f_{2}(u_1,u_2)\), componentes de \(V(u_1,u_2)\)
+con respecto a la base \(\{\mathbf{x}_{1}(u_1,u_2), \mathbf{x}_{2}(u_1,u_2)\}\), son diferenciables.
+
+El campo \(V\) se dice *diferenciable* en \(U\) si lo es en todos los puntos \(p \in U\).
+```
+
+```{exercise}
+Esta definición no depende de la parametrización local \(\mathbf{x}(u_1,u_2)\) elegida.
+```
+
+```{proof}
+Si \(\mathbf{y}(v_1,v_2)\) es otra parametrización local de \(M\) en un entorno de \(p \in U\), entonces
+\[
+V(p) = g_{1}(v_1,v_2) \mathbf{y}_{1}(v_1,v_2) + g_{2}(v_1, v_2) \mathbf{y}_{2}(v_1,v_2)
+\]
+Falta comprobar que si \(f_1\) y \(f_2\) son diferenciables, entonces \(g_1\) y \(g_2\) también lo son.
+```
+
+```{example}
+Los campos vectoriales \(\mathbf{x}_{1}(u_1,u_2)\) y \(\mathbf{x}_{2}(u_1,u_2)\) son diferenciables.
+```
+
+```{definition}
+Sea \(V\) un campo tangente diferenciable en \(U \subseteq M\), \(p \in U\), \(v \in T_{p}(M)\).
+Se considera la curva diferenciable \(\alpha : (-\varepsilon, \varepsilon) \to U\)
+tal que \(\alpha(0)=p\), \(\alpha'(0)=v\), parametrizada por el parámetro \(t\).
+Denotaremos por \(V(t)\) a la restricción de \(V\) a los puntos de la curva,
+i.e.
+\[
+V(t) := V(\alpha(t)) \quad \forall t \in (-\varepsilon, \varepsilon)
+\]
+```
+
+```{definition}
+El vector obtenido de proyectar \(V'(0)\) ortogonalmente en \(T_{p}(M)\) se denotará
+\( \frac{DV}{dt}(0)\)
+y se llamará **derivada covariante** del campo \(V(t)\) respecto al vector \(v\).
+```
+
+```{proposition}
+La derivada covariante es un concepto intrínseco y no depende de la elección de la curva.
+```
+
+```{proof}
+Que la derivada covariante sea un concepto intrínseco significa
+que solo depende de los coeficientes de la primera forma fundamental.
+
+Sea \(p \in U\), \(\mathbf{x}(u_1,u_2)\) una p.l. de \(p\) en \(U\).
+Sea \(\alpha(t) = \mathbf{x}(u_1(t), u_2(t))\).
+Sin pérdida de generalidad, suponemos que \(p = \alpha(0)\) y
+\[
+v=\alpha'(0) = \mathbf{x}_1(p) \underbrace{u'_1(0)}_{=\lambda_1} + \mathbf{x}_2(p) \underbrace{u'_2(0)}_{=\lambda_2}
+= \lambda_1 \mathbf{x}_1(p) + \lambda_2 \mathbf{x}_2(p)
+\]
+
+Sea \(V(u_1,u_2)\) un campo tangente diferenciable en \(\mathbf{x}(u_1,u_2)\). Entonces
+
+\[
+V(t) = V(u_1(t), u_2(t)) =
+\underbrace{f_1(u_1(t), u_2(t))}_{f_1(t)}
+\mathbf{x}_1(u_1(t), u_2(t))
++
+\underbrace{f_2(u_1(t), u_2(t))}_{f_2(t)}
+\mathbf{x}_2(u_1(t), u_2(t))
+\]
+
+\[
+\begin{aligned}
+\frac{dV}{dt} &=
+f'_{1}(t) \mathbf{x}_{1}(t)
++ f_{1}(t) \left[ \mathbf{x}_{11}(t) u'_{1}(t) + \mathbf{x}_{12} u'_{2}(t) \right]\\
+&+ f'_{2}(t) \mathbf{x}_{2}(t)
++ f_{2}(t) \left[ \mathbf{x}_{21}(t) u'_{1}(t) + \mathbf{x}_{22} u'_{2}(t) \right]\\
+&=
+f'_{1}(t) \mathbf{x}_{1}(t)\\
+&+ f_{1}(t) [
+\phantom{+}
+  \Gamma_{11}^{1}(t) \mathbf{x}_{1}(t) u'_{1}(t)
++ \Gamma_{11}^{2}(t) \mathbf{x}_{2}(t) u'_{1}(t)
++ L_{11} \mathbf{N}(t) u'_{1}(t)\\
+&\phantom{+f_{1}(t) [}
++ \Gamma_{12}^{1}(t) \mathbf{x}_{1}(t) u'_{2}(t)
++ \Gamma_{12}^{2}(t) \mathbf{x}_{2}(t) u'_{2}(t)
++ L_{12} \mathbf{N}(t) u'_{2}(t)
+]\\
+&+ f'_{2}(t) \mathbf{x}_{2}(t)\\
+&+ f_{2}(t) [
+\phantom{+}
+  \Gamma_{21}^{1}(t) \mathbf{x}_{1}(t) u'_{1}(t)
++ \Gamma_{21}^{2}(t) \mathbf{x}_{2}(t) u'_{1}(t)
++ L_{12} \mathbf{N}(t) u'_{1}(t)\\
+&\phantom{+f_{2}(t) [}
++ \Gamma_{22}^{1}(t) \mathbf{x}_{1}(t) u'_{2}(t)
++ \Gamma_{22}^{2}(t) \mathbf{x}_{2}(t) u'_{2}(t)
++ L_{22} \mathbf{N}(t) u'_{2}(t)
+]\\
+\frac{DV}{dt} &=
+f'_{1}(t) \mathbf{x}_{1}(t)
++ f_{1}(t) \left[
+  \Gamma_{11}^{1}(t) \mathbf{x}_{1}(t) u'_{1}(t)
++ \Gamma_{11}^{2}(t) \mathbf{x}_{2}(t) u'_{1}(t)
++ \Gamma_{12}^{1}(t) \mathbf{x}_{1}(t) u'_{2}(t)
++ \Gamma_{12}^{2}(t) \mathbf{x}_{2}(t) u'_{2}(t)
+\right]\\
+&+ f'_{2}(t) \mathbf{x}_{2}(t)
++ f_{2}(t) \left[
+  \Gamma_{21}^{1}(t) \mathbf{x}_{1}(t) u'_{1}(t)
++ \Gamma_{21}^{2}(t) \mathbf{x}_{2}(t) u'_{1}(t)
++ \Gamma_{22}^{1}(t) \mathbf{x}_{1}(t) u'_{2}(t)
++ \Gamma_{22}^{2}(t) \mathbf{x}_{2}(t) u'_{2}(t)
+\right]\\
+&=\left(
+  \Gamma_{11}^{1}(t) u'_{1}(t)
++ \Gamma_{12}^{1}(t) u'_{2}(t)
++ \Gamma_{21}^{1}(t) u'_{1}(t)
++ \Gamma_{22}^{1}(t) u'_{2}(t)
+\right) \mathbf{x}_1(t)
++
+\left(
+  \Gamma_{11}^{2}(t) u'_{1}(t)
++ \Gamma_{12}^{2}(t) u'_{2}(t)
++ \Gamma_{21}^{2}(t) u'_{1}(t)
++ \Gamma_{22}^{2}(t) u'_{2}(t)
+\right) \mathbf{x}_2(t)
+\end{aligned}
+\]
+```
+
+```{definition}
+Llamamos **segmento de curva diferenciable** \(\alpha\) en \(M\)
+definida \(\alpha : (-\varepsilon, \varepsilon) \to M\)
+a la restricción de \(\alpha\) al intervalo \([0,\ell] = I\), con \(\ell < \varepsilon\).
+
+Si \(\alpha(0) = p\) y \(\alpha(\ell) = q\), diremos que el segmento **une** \(p\) con \(q\).
+
+Diremos que el segmento es regular si \(\alpha'(t) \neq 0 \quad \forall t \in [0,\ell]\).
+
+Diremos que \(V(t)\) es un cuerpo tangente diferenciable en un segmento de curva si lo es en todos los puntos del segmento de curva.
+```
+
+```{definition}
+Si \(\alpha : I \to M\) es una curva diferenciable y \(V(t)\) es un campo vectorial a lo largo de \(\alpha\),
+entonces la expresión anterior de \(\frac{DV}{dt}\) definida \(\forall t \in I\) se denomina **derivada covariante** de \(V\) a lo largo de \(\alpha\).
+```
+
+```{exercise}
+Si tenemos dos superficies tangentes a lo largo de una curva y consideramos un campo \(V(t)\),
+probar que las derivadas covariantes de \(V(t)\) a lo largo de la curva no depende de las superficies
+```
+
+```{exercise}
+Sea \(M\) una superficie regular (s.r.),
+\(\alpha(t)\) una curva parametrizada regular (c.p.r.) en \(M\),
+\(V(t), W(t)\) campos tangentes a lo largo de \(\alpha\),
+\(f(t)\) una función diferenciable,
+\(\lambda \in \mathbb{R}\).
+
+a. \[\frac{D (V+W)}{dt} = \frac{DV}{dt} + \frac{DW}{dt}\]
+
+   Si \(V(t), W(t)\) son tangentes a lo largo de \(\alpha\), entonces \(V(t)+W(t)\) es un campo tangente a lo largo de \(\alpha\).
+   \[
+   \frac{d(V+W)}{dt} = V'(t) + W'(t) = \frac{dV}{dt} + \frac{dW}{dt}
+   = \frac{DV}{dt} + \left( \frac{dV}{dt} \right)^{\perp}
+   + \frac{DW}{dt} + \left( \frac{dW}{dt} \right)^{\perp}
+   \]
+   
+   De donde se sigue directamente el resultado buscado.
+b. \[\frac{D (f(t) V(t))}{dt} = f'(t)V(t) + f(t)\frac{DV}{dt}\]
+
+   Por el mismo argumento anterior, se puede descomponer \(\frac{dV}{dt}\) en componentes tangencial y normal y se obtiene resultado buscado.
+
+```
+
+```{definition}
+Un campo diferenciable \(V\) a lo largo de \(\alpha : I \to M\) se dice que es **paralelo** a lo largo de \(\alpha\) si
+\[
+\frac{DV}{dt} = 0 \quad \forall t \in I
+\]
+```
+
+```{remark}
+Esta definición no depende de la parametrización de la curva.
+```
+
+```{proof}
+Si cambiamos la parametrización de \(\alpha\), \(t \to \sigma = \sigma(t)\), entonces:
+\begin{align}
+V(t) &= V(\sigma(t))\\
+V'(t)&= \frac{V(\sigma)}{d\sigma} \frac{d \sigma}{dt} = V'(\sigma) \underbrace{\frac{d\sigma}{dt}}_{\neq 0}\\
+\frac{DV}{dt} &= \frac{DV}{d\sigma} \frac{d\sigma}{dt} = 0
+\end{align}
+```
+
+```{remark}
+Si \(M\) es un plano,
+\(\alpha(t)\) curva cualquiera,
+\(V(t)\) campo cualquiera,
+sabemos que \(\frac{DV}{dt} = V'(t)\).
+Si \(V(t)\) es paralelo, entonces \(\frac{DV}{dt}=V'(t)=0\),
+luego \(V(t) = v_0\) constante.
+
+Si \(W(t)\) es otro campo paralelo, entonces el ángulo que forman \(V\) y \(W\) es constante.
+```
+
+```{proposition}
+Sean \(V\), \(W\) campos paralelos a lo largo de \(\alpha : I \to M\).
+Entonces \(V(t) \cdot W(t)\) es constante, y en particular
+\(\lVert V(t) \rVert\) y \(\lVert W(t) \rVert\) son constantes y el ángulo que forman también lo es.
+```
+
+```{proof}
+\(\frac{dV}{dt}\) y \(\frac{dW}{dt}\) son vectores normales al plano tangente.
+\begin{align}
+\frac{d}{dt} (V(t) + W(t))
+&= V'(t) W(t) + V(t) W'(t)\\
+&= \frac{dV}{dt} \cdot W(t) + V(t) \cdot \frac{dW}{dt}\\
+&= 0 + 0 = 0
+\end{align}
+Luego \(V(t) \cdot W(t)\) es constante.
+
+Las normas son constantes considerando dos campos iguales, y el resultado del ángulo es consecuencia directa de todo lo anterior.
+```

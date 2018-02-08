@@ -41,7 +41,7 @@ El horario de tutorías es el siguiente:
 
 ## Bibliografía recomendada
 
-La bibliografía recomendada para el bloque de Geometría es [@docarmo1990] y [@cifre2010].
+La bibliografía recomendada para el bloque de Geometría es <!--[@docarmo1990] y [@cifre2010] -->.
 
 ## Evaluación alternativa
 
