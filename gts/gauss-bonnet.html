@@ -25,7 +25,7 @@
 <meta name="author" content="Carlos José Ruiz-Henestrosa Ruiz">
 
 
-<meta name="date" content="2018-02-06">
+<meta name="date" content="2018-02-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,6 +47,13 @@
 
 
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }
+});
+</script>
 
 
 <style type="text/css">
@@ -109,7 +116,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
 <li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html"><i class="fa fa-check"></i><b>1</b> Teorema de Gauss-Bonnet</a></li>
+<li class="chapter" data-level="1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html"><i class="fa fa-check"></i><b>1</b> Teorema de Gauss-Bonnet</a><ul>
+<li class="chapter" data-level="1.1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html#derivada-covariante.-transporte-paralelo."><i class="fa fa-check"></i><b>1.1</b> Derivada covariante. Transporte paralelo.</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
@@ -133,7 +142,209 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="gauss-bonnet" class="section level1">
 <h1><span class="header-section-number">Tema 1</span> Teorema de Gauss-Bonnet</h1>
+<div id="derivada-covariante.-transporte-paralelo." class="section level2">
+<h2><span class="header-section-number">1.1</span> Derivada covariante. Transporte paralelo.</h2>
+<p>Sea <span class="math inline">\(M\)</span> una superficie regular y <span class="math inline">\(U \subset M\)</span> abierto.</p>
 
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definition 1.1  </strong></span>Un <em>campo vectorial tangente</em> es una correspondencia <span class="math inline">\(V\)</span> que a cada punto <span class="math inline">\(p \in U\)</span> le hace corresponder un vector <span class="math inline">\(V(p) \in T_{p}(M)\)</span>, donde <span class="math inline">\(T_{p}(M)\)</span> es el plano tangente a <span class="math inline">\(M\)</span> en <span class="math inline">\(p\)</span>.</p>
+<p>El campo <span class="math inline">\(V\)</span> se dice <em>diferenciable</em> en <span class="math inline">\(p\)</span> si para cualquier parametrización local <span class="math inline">\(\mathbf{x}(u_1, u_2)\)</span> de <span class="math inline">\(M\)</span> entorno a <span class="math inline">\(p\)</span> contenida en <span class="math inline">\(U\)</span>, las funciones <span class="math inline">\(f_{1}(u_1,u_2),\ f_{2}(u_1,u_2)\)</span>, componentes de <span class="math inline">\(V(u_1,u_2)\)</span> con respecto a la base <span class="math inline">\(\{\mathbf{x}_{1}(u_1,u_2), \mathbf{x}_{2}(u_1,u_2)\}\)</span>, son diferenciables.</p>
+El campo <span class="math inline">\(V\)</span> se dice <em>diferenciable</em> en <span class="math inline">\(U\)</span> si lo es en todos los puntos <span class="math inline">\(p \in U\)</span>.
+</div>
+
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-4" class="exercise"><strong>Exercise 1.1  </strong></span>Esta definición no depende de la parametrización local <span class="math inline">\(\mathbf{x}(u_1,u_2)\)</span> elegida.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Proof. </em></span> Si <span class="math inline">\(\mathbf{y}(v_1,v_2)\)</span> es otra parametrización local de <span class="math inline">\(M\)</span> en un entorno de <span class="math inline">\(p \in U\)</span>, entonces <span class="math display">\[
+V(p) = g_{1}(v_1,v_2) \mathbf{y}_{1}(v_1,v_2) + g_{2}(v_1, v_2) \mathbf{y}_{2}(v_1,v_2)
+\]</span> Falta comprobar que si <span class="math inline">\(f_1\)</span> y <span class="math inline">\(f_2\)</span> son diferenciables, entonces <span class="math inline">\(g_1\)</span> y <span class="math inline">\(g_2\)</span> también lo son.
+</div>
+
+
+<div class="example">
+<span id="exm:unnamed-chunk-6" class="example"><strong>Example 1.1  </strong></span>Los campos vectoriales <span class="math inline">\(\mathbf{x}_{1}(u_1,u_2)\)</span> y <span class="math inline">\(\mathbf{x}_{2}(u_1,u_2)\)</span> son diferenciables.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-7" class="definition"><strong>Definition 1.2  </strong></span>Sea <span class="math inline">\(V\)</span> un campo tangente diferenciable en <span class="math inline">\(U \subseteq M\)</span>, <span class="math inline">\(p \in U\)</span>, <span class="math inline">\(v \in T_{p}(M)\)</span>. Se considera la curva diferenciable <span class="math inline">\(\alpha : (-\varepsilon, \varepsilon) \to U\)</span> tal que <span class="math inline">\(\alpha(0)=p\)</span>, <span class="math inline">\(\alpha&#39;(0)=v\)</span>, parametrizada por el parámetro <span class="math inline">\(t\)</span>. Denotaremos por <span class="math inline">\(V(t)\)</span> a la restricción de <span class="math inline">\(V\)</span> a los puntos de la curva, i.e. <span class="math display">\[
+V(t) := V(\alpha(t)) \quad \forall t \in (-\varepsilon, \varepsilon)
+\]</span>
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-8" class="definition"><strong>Definition 1.3  </strong></span>El vector obtenido de proyectar <span class="math inline">\(V&#39;(0)\)</span> ortogonalmente en <span class="math inline">\(T_{p}(M)\)</span> se denotará ( (0)) y se llamará <strong>derivada covariante</strong> del campo <span class="math inline">\(V(t)\)</span> respecto al vector <span class="math inline">\(v\)</span>.
+</div>
+
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-9" class="proposition"><strong>Proposition 1.1  </strong></span>La derivada covariante es un concepto intrínseco y no depende de la elección de la curva.
+</div>
+
+
+<div class="proof">
+<p> <span class="proof"><em>Proof. </em></span> Que la derivada covariante sea un concepto intrínseco significa que solo depende de los coeficientes de la primera forma fundamental.</p>
+<p>Sea <span class="math inline">\(p \in U\)</span>, <span class="math inline">\(\mathbf{x}(u_1,u_2)\)</span> una p.l. de <span class="math inline">\(p\)</span> en <span class="math inline">\(U\)</span>. Sea <span class="math inline">\(\alpha(t) = \mathbf{x}(u_1(t), u_2(t))\)</span>. Sin pérdida de generalidad, suponemos que <span class="math inline">\(p = \alpha(0)\)</span> y <span class="math display">\[
+v=\alpha&#39;(0) = \mathbf{x}_1(p) \underbrace{u&#39;_1(0)}_{=\lambda_1} + \mathbf{x}_2(p) \underbrace{u&#39;_2(0)}_{=\lambda_2}
+= \lambda_1 \mathbf{x}_1(p) + \lambda_2 \mathbf{x}_2(p)
+\]</span></p>
+<p>Sea <span class="math inline">\(V(u_1,u_2)\)</span> un campo tangente diferenciable en <span class="math inline">\(\mathbf{x}(u_1,u_2)\)</span>. Entonces</p>
+<p><span class="math display">\[
+V(t) = V(u_1(t), u_2(t)) =
+\underbrace{f_1(u_1(t), u_2(t))}_{f_1(t)}
+\mathbf{x}_1(u_1(t), u_2(t))
++
+\underbrace{f_2(u_1(t), u_2(t))}_{f_2(t)}
+\mathbf{x}_2(u_1(t), u_2(t))
+\]</span></p>
+<span class="math display">\[
+\begin{aligned}
+\frac{dV}{dt} &amp;=
+f&#39;_{1}(t) \mathbf{x}_{1}(t)
++ f_{1}(t) \left[ \mathbf{x}_{11}(t) u&#39;_{1}(t) + \mathbf{x}_{12} u&#39;_{2}(t) \right]\\
+&amp;+ f&#39;_{2}(t) \mathbf{x}_{2}(t)
++ f_{2}(t) \left[ \mathbf{x}_{21}(t) u&#39;_{1}(t) + \mathbf{x}_{22} u&#39;_{2}(t) \right]\\
+&amp;=
+f&#39;_{1}(t) \mathbf{x}_{1}(t)\\
+&amp;+ f_{1}(t) [
+\phantom{+}
+  \Gamma_{11}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{1}(t)
++ \Gamma_{11}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{1}(t)
++ L_{11} \mathbf{N}(t) u&#39;_{1}(t)\\
+&amp;\phantom{+f_{1}(t) [}
++ \Gamma_{12}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{2}(t)
++ \Gamma_{12}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{2}(t)
++ L_{12} \mathbf{N}(t) u&#39;_{2}(t)
+]\\
+&amp;+ f&#39;_{2}(t) \mathbf{x}_{2}(t)\\
+&amp;+ f_{2}(t) [
+\phantom{+}
+  \Gamma_{21}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{1}(t)
++ \Gamma_{21}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{1}(t)
++ L_{12} \mathbf{N}(t) u&#39;_{1}(t)\\
+&amp;\phantom{+f_{2}(t) [}
++ \Gamma_{22}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{2}(t)
++ \Gamma_{22}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{2}(t)
++ L_{22} \mathbf{N}(t) u&#39;_{2}(t)
+]\\
+\frac{DV}{dt} &amp;=
+f&#39;_{1}(t) \mathbf{x}_{1}(t)
++ f_{1}(t) \left[
+  \Gamma_{11}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{1}(t)
++ \Gamma_{11}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{1}(t)
++ \Gamma_{12}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{2}(t)
++ \Gamma_{12}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{2}(t)
+\right]\\
+&amp;+ f&#39;_{2}(t) \mathbf{x}_{2}(t)
++ f_{2}(t) \left[
+  \Gamma_{21}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{1}(t)
++ \Gamma_{21}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{1}(t)
++ \Gamma_{22}^{1}(t) \mathbf{x}_{1}(t) u&#39;_{2}(t)
++ \Gamma_{22}^{2}(t) \mathbf{x}_{2}(t) u&#39;_{2}(t)
+\right]\\
+&amp;=\left(
+  \Gamma_{11}^{1}(t) u&#39;_{1}(t)
++ \Gamma_{12}^{1}(t) u&#39;_{2}(t)
++ \Gamma_{21}^{1}(t) u&#39;_{1}(t)
++ \Gamma_{22}^{1}(t) u&#39;_{2}(t)
+\right) \mathbf{x}_1(t)
++
+\left(
+  \Gamma_{11}^{2}(t) u&#39;_{1}(t)
++ \Gamma_{12}^{2}(t) u&#39;_{2}(t)
++ \Gamma_{21}^{2}(t) u&#39;_{1}(t)
++ \Gamma_{22}^{2}(t) u&#39;_{2}(t)
+\right) \mathbf{x}_2(t)
+\end{aligned}
+\]</span>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definition 1.4  </strong></span>Llamamos <strong>segmento de curva diferenciable</strong> <span class="math inline">\(\alpha\)</span> en <span class="math inline">\(M\)</span> definida <span class="math inline">\(\alpha : (-\varepsilon, \varepsilon) \to M\)</span> a la restricción de <span class="math inline">\(\alpha\)</span> al intervalo <span class="math inline">\([0,\ell] = I\)</span>, con <span class="math inline">\(\ell &lt; \varepsilon\)</span>.</p>
+<p>Si <span class="math inline">\(\alpha(0) = p\)</span> y <span class="math inline">\(\alpha(\ell) = q\)</span>, diremos que el segmento <strong>une</strong> <span class="math inline">\(p\)</span> con <span class="math inline">\(q\)</span>.</p>
+<p>Diremos que el segmento es regular si <span class="math inline">\(\alpha&#39;(t) \neq 0 \quad \forall t \in [0,\ell]\)</span>.</p>
+Diremos que <span class="math inline">\(V(t)\)</span> es un cuerpo tangente diferenciable en un segmento de curva si lo es en todos los puntos del segmento de curva.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-12" class="definition"><strong>Definition 1.5  </strong></span>Si <span class="math inline">\(\alpha : I \to M\)</span> es una curva diferenciable y <span class="math inline">\(V(t)\)</span> es un campo vectorial a lo largo de <span class="math inline">\(\alpha\)</span>, entonces la expresión anterior de <span class="math inline">\(\frac{DV}{dt}\)</span> definida <span class="math inline">\(\forall t \in I\)</span> se denomina <strong>derivada covariante</strong> de <span class="math inline">\(V\)</span> a lo largo de <span class="math inline">\(\alpha\)</span>.
+</div>
+
+
+<div class="exercise">
+<span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercise 1.2  </strong></span>Si tenemos dos superficies tangentes a lo largo de una curva y consideramos un campo <span class="math inline">\(V(t)\)</span>, probar que las derivadas covariantes de <span class="math inline">\(V(t)\)</span> a lo largo de la curva no depende de las superficies
+</div>
+
+
+<div class="exercise">
+<p><span id="exr:unnamed-chunk-14" class="exercise"><strong>Exercise 1.3  </strong></span>Sea <span class="math inline">\(M\)</span> una superficie regular (s.r.), <span class="math inline">\(\alpha(t)\)</span> una curva parametrizada regular (c.p.r.) en <span class="math inline">\(M\)</span>, <span class="math inline">\(V(t), W(t)\)</span> campos tangentes a lo largo de <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(f(t)\)</span> una función diferenciable, <span class="math inline">\(\lambda \in \mathbb{R}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[\frac{D (V+W)}{dt} = \frac{DV}{dt} + \frac{DW}{dt}\]</span></li>
+</ol>
+<p>Si <span class="math inline">\(V(t), W(t)\)</span> son tangentes a lo largo de <span class="math inline">\(\alpha\)</span>, entonces <span class="math inline">\(V(t)+W(t)\)</span> es un campo tangente a lo largo de <span class="math inline">\(\alpha\)</span>. <span class="math display">\[
+   \frac{d(V+W)}{dt} = V&#39;(t) + W&#39;(t) = \frac{dV}{dt} + \frac{dW}{dt}
+   = \frac{DV}{dt} + \left( \frac{dV}{dt} \right)^{\perp}
+   + \frac{DW}{dt} + \left( \frac{dW}{dt} \right)^{\perp}
+   \]</span></p>
+<p>De donde se sigue directamente el resultado buscado. b. <span class="math display">\[\frac{D (f(t) V(t))}{dt} = f&#39;(t)V(t) + f(t)\frac{DV}{dt}\]</span></p>
+<p>Por el mismo argumento anterior, se puede descomponer <span class="math inline">\(\frac{dV}{dt}\)</span> en componentes tangencial y normal y se obtiene resultado buscado.</p>
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-15" class="definition"><strong>Definition 1.6  </strong></span>Un campo diferenciable <span class="math inline">\(V\)</span> a lo largo de <span class="math inline">\(\alpha : I \to M\)</span> se dice que es <strong>paralelo</strong> a lo largo de <span class="math inline">\(\alpha\)</span> si <span class="math display">\[
+\frac{DV}{dt} = 0 \quad \forall t \in I
+\]</span>
+</div>
+
+
+<div class="remark">
+ <span class="remark"><em>Remark. </em></span> Esta definición no depende de la parametrización de la curva.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Proof. </em></span> Si cambiamos la parametrización de <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(t \to \sigma = \sigma(t)\)</span>, entonces:
+<span class="math display">\[\begin{align}
+V(t) &amp;= V(\sigma(t))\\
+V&#39;(t)&amp;= \frac{V(\sigma)}{d\sigma} \frac{d \sigma}{dt} = V&#39;(\sigma) \underbrace{\frac{d\sigma}{dt}}_{\neq 0}\\
+\frac{DV}{dt} &amp;= \frac{DV}{d\sigma} \frac{d\sigma}{dt} = 0
+\end{align}\]</span>
+</div>
+
+
+<div class="remark">
+<p> <span class="remark"><em>Remark. </em></span> Si <span class="math inline">\(M\)</span> es un plano, <span class="math inline">\(\alpha(t)\)</span> curva cualquiera, <span class="math inline">\(V(t)\)</span> campo cualquiera, sabemos que <span class="math inline">\(\frac{DV}{dt} = V&#39;(t)\)</span>. Si <span class="math inline">\(V(t)\)</span> es paralelo, entonces <span class="math inline">\(\frac{DV}{dt}=V&#39;(t)=0\)</span>, luego <span class="math inline">\(V(t) = v_0\)</span> constante.</p>
+Si <span class="math inline">\(W(t)\)</span> es otro campo paralelo, entonces el ángulo que forman <span class="math inline">\(V\)</span> y <span class="math inline">\(W\)</span> es constante.
+</div>
+
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-19" class="proposition"><strong>Proposition 1.2  </strong></span>Sean <span class="math inline">\(V\)</span>, <span class="math inline">\(W\)</span> campos paralelos a lo largo de <span class="math inline">\(\alpha : I \to M\)</span>. Entonces <span class="math inline">\(V(t) \cdot W(t)\)</span> es constante, y en particular <span class="math inline">\(\lVert V(t) \rVert\)</span> y <span class="math inline">\(\lVert W(t) \rVert\)</span> son constantes y el ángulo que forman también lo es.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Proof. </em></span> <span class="math inline">\(\frac{dV}{dt}\)</span> y <span class="math inline">\(\frac{dW}{dt}\)</span> son vectores normales al plano tangente.
+<span class="math display">\[\begin{align}
+\frac{d}{dt} (V(t) + W(t))
+&amp;= V&#39;(t) W(t) + V(t) W&#39;(t)\\
+&amp;= \frac{dV}{dt} \cdot W(t) + V(t) \cdot \frac{dW}{dt}\\
+&amp;= 0 + 0 = 0
+\end{align}\]</span>
+<p>Luego <span class="math inline">\(V(t) \cdot W(t)\)</span> es constante.</p>
+Las normas son constantes considerando dos campos iguales, y el resultado del ángulo es consecuencia directa de todo lo anterior.
+</div>
+
+
+</div>
 </div>
             </section>
 
@@ -182,6 +393,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

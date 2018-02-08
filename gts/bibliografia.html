@@ -25,7 +25,7 @@
 <meta name="author" content="Carlos José Ruiz-Henestrosa Ruiz">
 
 
-<meta name="date" content="2018-02-06">
+<meta name="date" content="2018-02-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,6 +47,13 @@
 
 
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }
+});
+</script>
 
 
 <style type="text/css">
@@ -109,7 +116,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="0.2" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#bibliografia-recomendada"><i class="fa fa-check"></i><b>0.2</b> Bibliografía recomendada</a></li>
 <li class="chapter" data-level="0.3" data-path="informacion-de-la-asignatura.html"><a href="informacion-de-la-asignatura.html#evaluacion-alternativa"><i class="fa fa-check"></i><b>0.3</b> Evaluación alternativa</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html"><i class="fa fa-check"></i><b>1</b> Teorema de Gauss-Bonnet</a></li>
+<li class="chapter" data-level="1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html"><i class="fa fa-check"></i><b>1</b> Teorema de Gauss-Bonnet</a><ul>
+<li class="chapter" data-level="1.1" data-path="gauss-bonnet.html"><a href="gauss-bonnet.html#derivada-covariante.-transporte-paralelo."><i class="fa fa-check"></i><b>1.1</b> Derivada covariante. Transporte paralelo.</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
@@ -134,14 +143,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="bibliografia" class="section level1 unnumbered">
 <h1>Bibliografía</h1>
 
-<div id="refs" class="references">
-<div>
-<p>Cifre, MA Hernández, y JA Pastor González. 2010. «Un curso de Geometría diferencial». Consejo Superior de Investigaciones Científicas, Madrid.</p>
-</div>
-<div>
-<p>Do Carmo, Manfredo Perdigão. 1990. <em>Geometría diferencial de curvas y superficies</em>. Alianza Editorial.</p>
-</div>
-</div>
 </div>
             </section>
 
@@ -190,6 +191,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
