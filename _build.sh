@@ -2,7 +2,7 @@
 
 mkdir output
 
-for i in demografia gts mlde; do
+for i in demografia gts mlde mom pm tp; do
   cd "$i"
   Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
   cd ..
