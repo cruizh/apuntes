@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html  lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Programación Matemática</title>
+  <meta name="description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018">
+  <meta name="generator" content="bookdown 0.6.2 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Programación Matemática" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018" />
+  <meta name="github-repo" content="cruizh/apuntes" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Programación Matemática" />
+  
+  <meta name="twitter:description" content="Asignatura del Grado en Matemáticas en la Universidad de Sevilla, curso 2017-2018" />
+  
+
+<meta name="author" content="Carlos José Ruiz-Henestrosa Ruiz">
+
+
+<meta name="date" content="2018-02-12">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="analisis-convexo.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: {
+      EV: ["\\operatorname{\\mathbb{E}}\\left[#1\\right]",1],
+      P: ["\\operatorname{\\mathbb{P}}\\left[#1\\right]", 1],
+      Norm: ["\\operatorname{N}\\left(#1,#2\\right)", 2]
+    }
+  }
+});
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Programación Matemática</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#profesores"><i class="fa fa-check"></i><b>1.1</b> Profesores</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="analisis-convexo.html"><a href="analisis-convexo.html"><i class="fa fa-check"></i><b>2</b> Análisis convexo</a><ul>
+<li class="chapter" data-level="2.1" data-path="analisis-convexo.html"><a href="analisis-convexo.html#definiciones-basicas.-teorema-de-caratheodory."><i class="fa fa-check"></i><b>2.1</b> Definiciones básicas. Teorema de Carathéodory.</a></li>
+<li class="chapter" data-level="2.2" data-path="analisis-convexo.html"><a href="analisis-convexo.html#separacion-de-conjuntos.-lema-de-farkas."><i class="fa fa-check"></i><b>2.2</b> Separación de conjuntos. Lema de Farkas.</a></li>
+<li class="chapter" data-level="2.3" data-path="analisis-convexo.html"><a href="analisis-convexo.html#conjuntos-poliedricos.-representacion-de-conjuntos-poliedricos."><i class="fa fa-check"></i><b>2.3</b> Conjuntos poliédricos. Representación de conjuntos poliédricos.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="programacion-lineal.html"><a href="programacion-lineal.html"><i class="fa fa-check"></i><b>3</b> Programación lineal</a><ul>
+<li class="chapter" data-level="3.1" data-path="programacion-lineal.html"><a href="programacion-lineal.html#definiciones-basicas.-planteamiento-del-problema"><i class="fa fa-check"></i><b>3.1</b> Definiciones básicas. Planteamiento del problema</a></li>
+<li class="chapter" data-level="3.2" data-path="programacion-lineal.html"><a href="programacion-lineal.html#teorema-fundamental-de-la-programacion-lineal"><i class="fa fa-check"></i><b>3.2</b> Teorema fundamental de la Programación lineal</a></li>
+<li class="chapter" data-level="3.3" data-path="programacion-lineal.html"><a href="programacion-lineal.html#el-metodo-del-simplex"><i class="fa fa-check"></i><b>3.3</b> El método del simplex</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="programacion-lineal.html"><a href="programacion-lineal.html#mejora-de-una-solucion-basica-factible"><i class="fa fa-check"></i><b>3.3.1</b> Mejora de una solución básica factible</a></li>
+<li class="chapter" data-level="3.3.2" data-path="programacion-lineal.html"><a href="programacion-lineal.html#solucion-basica-factible-inicial"><i class="fa fa-check"></i><b>3.3.2</b> Solución básica factible inicial</a></li>
+<li class="chapter" data-level="3.3.3" data-path="programacion-lineal.html"><a href="programacion-lineal.html#convergencia"><i class="fa fa-check"></i><b>3.3.3</b> Convergencia</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="dualidad.html"><a href="dualidad.html"><i class="fa fa-check"></i><b>4</b> Dualidad en programación lineal</a><ul>
+<li class="chapter" data-level="4.1" data-path="dualidad.html"><a href="dualidad.html#introduccion-1"><i class="fa fa-check"></i><b>4.1</b> Introducción</a></li>
+<li class="chapter" data-level="4.2" data-path="dualidad.html"><a href="dualidad.html#el-problema-dual"><i class="fa fa-check"></i><b>4.2</b> El problema dual</a></li>
+<li class="chapter" data-level="4.3" data-path="dualidad.html"><a href="dualidad.html#condiciones-de-optimalidad-teoremas-de-dualidad-e-interpretacion-economica-del-dual"><i class="fa fa-check"></i><b>4.3</b> Condiciones de optimalidad, teoremas de dualidad e interpretación económica del dual</a></li>
+<li class="chapter" data-level="4.4" data-path="dualidad.html"><a href="dualidad.html#algoritmo-del-simplex-dual"><i class="fa fa-check"></i><b>4.4</b> Algoritmo del simplex dual</a></li>
+<li class="chapter" data-level="4.5" data-path="dualidad.html"><a href="dualidad.html#analisis-de-sensibilidad-y-post-optimalidad"><i class="fa fa-check"></i><b>4.5</b> Análisis de sensibilidad y post-optimalidad</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html"><i class="fa fa-check"></i><b>5</b> Programación lineal entera</a><ul>
+<li class="chapter" data-level="5.1" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#problemas-con-estructura-especial"><i class="fa fa-check"></i><b>5.1</b> Problemas con estructura especial</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#transporte"><i class="fa fa-check"></i><b>5.1.1</b> Transporte</a></li>
+<li class="chapter" data-level="5.1.2" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#asignacion"><i class="fa fa-check"></i><b>5.1.2</b> Asignación</a></li>
+<li class="chapter" data-level="5.1.3" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#flujo"><i class="fa fa-check"></i><b>5.1.3</b> Flujo</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#esquemas-de-ramificacion-y-acotacion"><i class="fa fa-check"></i><b>5.2</b> Esquemas de ramificación y acotación</a></li>
+<li class="chapter" data-level="5.3" data-path="programacion-lineal-entera.html"><a href="programacion-lineal-entera.html#introduccion-a-los-metodos-de-planos-de-corte"><i class="fa fa-check"></i><b>5.3</b> Introducción a los métodos de planos de corte</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="pnl.html"><a href="pnl.html"><i class="fa fa-check"></i><b>6</b> Programación no lineal sin restricciones</a><ul>
+<li class="chapter" data-level="6.1" data-path="pnl.html"><a href="pnl.html#condiciones-de-optimalidad-en-problemas-sin-restricciones"><i class="fa fa-check"></i><b>6.1</b> Condiciones de optimalidad en problemas sin restricciones</a></li>
+<li class="chapter" data-level="6.2" data-path="pnl.html"><a href="pnl.html#metodos-iterados-de-tipo-gradiente"><i class="fa fa-check"></i><b>6.2</b> Métodos iterados de tipo gradiente</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="pnl.html"><a href="pnl.html#metodo-de-newton"><i class="fa fa-check"></i><b>6.2.1</b> Método de Newton</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="programacion-no-lineal-sobre-conjuntos-convexos.html"><a href="programacion-no-lineal-sobre-conjuntos-convexos.html"><i class="fa fa-check"></i><b>7</b> Programación no lineal sobre conjuntos convexos</a><ul>
+<li class="chapter" data-level="7.1" data-path="programacion-no-lineal-sobre-conjuntos-convexos.html"><a href="programacion-no-lineal-sobre-conjuntos-convexos.html#condiciones-de-optimalidad"><i class="fa fa-check"></i><b>7.1</b> Condiciones de optimalidad</a></li>
+<li class="chapter" data-level="7.2" data-path="programacion-no-lineal-sobre-conjuntos-convexos.html"><a href="programacion-no-lineal-sobre-conjuntos-convexos.html#metodos-de-gradiente-proyectado-y-reducido"><i class="fa fa-check"></i><b>7.2</b> Métodos de gradiente proyectado y reducido</a></li>
+<li class="chapter" data-level="7.3" data-path="programacion-no-lineal-sobre-conjuntos-convexos.html"><a href="programacion-no-lineal-sobre-conjuntos-convexos.html#teoria-lagrangiana"><i class="fa fa-check"></i><b>7.3</b> Teoría Lagrangiana</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliografia.html"><a href="bibliografia.html"><i class="fa fa-check"></i>Bibliografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programación Matemática</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Programación Matemática</h1>
+<h4 class="author"><em>Carlos José Ruiz-Henestrosa Ruiz</em></h4>
+<h4 class="date"><em>2018-02-12</em></h4>
+</div>
+<div id="introduccion" class="section level1">
+<h1><span class="header-section-number">Tema 1</span> Introducción</h1>
+<p>El objetivo de la <em>Programación Matemática</em> es el estudio teórico de los problemas de optimización, así como de la puesta en marcha de los algoritmos de resolución.</p>
+<p>La <em>Programación Matemática</em> estudia cómo describir y alcanzar lo que es mejor, lo que denominaremos <strong>óptimo</strong>.</p>
+<p>El término <em>programación</em> viene dado por los orígenes de esta metodología, inicialmente desarrollada en el contexto de la economía y la investigación operativa: <em>búsqueda de programas de actuación óptimos</em>.</p>
+<div id="profesores" class="section level2">
+<h2><span class="header-section-number">1.1</span> Profesores</h2>
+<p>La profesora de teoría es <a href="rafaela@us.es">Rafaela Osuna Gómez</a>, del despacho 8 del Departamento de Estadística e Investigación Operativa. Las clases de teoría se impartirán los lunes. Su horario de tutorías es:</p>
+<ul>
+<li>Lunes de 12:30 a 14:30</li>
+<li>Martes:</li>
+<li>de 10:30 a 12:30</li>
+<li>de 18:00 a 20:00</li>
+</ul>
+<p>El profesor de problemas es <a href="http://destio.us.es/calvo/">Pedro Luque</a>. Las clases de problemas se impartirán los miércoles.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="analisis-convexo.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cruizh/apuntes/edit/master/pm/index.Rmd",
+"text": "Editar"
+},
+"download": ["pm.pdf", "pm.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
